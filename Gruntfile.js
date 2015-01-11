@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 
     var pathConfig = {
         // where the source files are
-        src: require('./bower.json').srcPath || 'src',
+        src: require('./bower.json').srcPath || 'client',
         // where test source files are
         test: 'test',
         // where to build distribution version
@@ -357,7 +357,7 @@ module.exports = function (grunt) {
     // build development version
     grunt.registerTask('dev', [
       'clean:dev',
-      'wiredep',
+      //'wiredep',
       'force:tsc:dev',
       'clean:dev-js',
       'sass'
