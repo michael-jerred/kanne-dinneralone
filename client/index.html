@@ -1,0 +1,55 @@
+<!doctype html>
+<html ng-app="app" ng-strict-di lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dinner Alone Film</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.min.css">
+    <link rel="stylesheet" href="main.css">
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <md-toolbar>
+        <ul class="md-toolbar-tools">
+            <li><a href="#/home">SYNOPSIS</a></li>
+            <li><a href="#/about">COLLABORATORS</a></li>
+            <li><a href="#/director">DIRECTOR</a></li>
+            <li><a href="#/media">MEDIA</a></li>
+            <li><a href="#/contact">CONTACT</a></li>
+        </ul>
+        <p class="text-muted">A KANNE VEE FILM</p>
+        <h2>DINNER ALONE</h2>
+    </md-toolbar>
+
+    <div ng-view class="container-fluid">
+
+    </div>
+
+    <div class="footer">
+        <p><span class="glyphicon glyphicon-heart"></span> copyright blah blah</p>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/hammerjs/2.0.4/hammer.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-touch.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.min.js"></script>
+
+    <script src="main.js"></script>
+    <script src="home/home.js"></script>
+</body>
+</html>
