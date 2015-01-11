@@ -3,7 +3,7 @@
 
 module App.Home {
 
-    var module = angular.module('app.home', ['ngMaterial']);
+    var module = angular.module('app.home', ['ngRoute']);
     module.controller('homeCtrl', Controller);
     module.config([
         '$routeProvider',

@@ -4,7 +4,6 @@
 module App {
     var module = angular.module('app', [
         'ngRoute',
-        'ngMaterial',
         'app.home'
         ]);
 }

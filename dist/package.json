@@ -1,0 +1,20 @@
+{
+    "name": "kanne-dinneralone",
+    "version": "0.0.1",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/michael-jerred/kanne-dinneralone"
+    },
+    "dependencies": {
+        "express": "~4.9.x"
+    },
+    "devDependencies": {
+    },
+    "engines": {
+        "node": "0.10.x"
+    }
+}

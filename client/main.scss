@@ -1,0 +1,29 @@
+$body-bg: #333;
+$navbar-default-bg: #333;
+$text-color: #bc8761;
+$link-color: #bc8761;
+$component-active-color: #333;
+$component-active-bg: #333;
+
+$nav-link-hover-bg: #222;
+
+$navbar-default-toggle-hover-bg: #222;
+$navbar-default-toggle-border-color: #222;
+$navbar-default-toggle-icon-bar-bg: #aaa;
+
+@font-face {
+    font-family: RomanSD;
+    font-style:  normal;
+    font-weight: 400;
+    src: url('/fonts/RomanSD.ttf') format('truetype');
+}
+
+$font-family-sans-serif: "RomanSD";
+
+
+@import "bootstrap";
+
+.text-blur {
+    color: transparent;
+    text-shadow: 0 0 1px #bc8761;
+}

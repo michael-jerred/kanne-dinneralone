@@ -6,11 +6,11 @@ module.exports = function (grunt) {
 
     var pathConfig = {
         // where the source files are
-        src: require('./bower.json').srcPath || 'client',
+        src: 'client',
         // where test source files are
         test: 'test',
         // where to build distribution version
-        dist: 'dist',
+        dist: 'dist/public',
         // where to put compiled files
         compiled: '.compiled',
         // where to put compiled tests
@@ -112,14 +112,6 @@ module.exports = function (grunt) {
                     open: true,
                     base: '<%= path.dist %>'
                 }
-            }
-        },
-
-        // inject bower components
-        wiredep: {
-            all: {
-                src: ['<%= path.src %>/index.html'],
-                ignorePath: /\.\.\//
             }
         },
 
@@ -257,19 +249,6 @@ module.exports = function (grunt) {
             }
         },
 
-        // ng-annotate tries to make the code safe for minification automatically
-        // by using the Angular long form for dependency injection.
-        ngAnnotate: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= path.compiled %>/concat',
-                    src: ['**/*.js', '!oldieshim.js'],
-                    dest: '<%= path.compiled %>/concat'
-                }]
-            }
-        },
-
         // Replace Google CDN references
         cdnify: {
             dist: {
@@ -308,13 +287,11 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: '<%= path.compiled %>/',
-                        src: ['generated/**'],
-                        dest: '<%= path.dist %>'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'bower_components/bootstrap-sass-official/assets',
-                        src: 'fonts/bootstrap/*',
+                        src: [
+                            '**/*.js',
+                            '**/*.js.map',
+                            '**/*.css',
+                            '**/*.css.map'],
                         dest: '<%= path.dist %>'
                     }
                 ]
@@ -326,7 +303,7 @@ module.exports = function (grunt) {
             dev: [],
             test: [],
             dist: [
-                'imagemin',
+            //    'imagemin',
                 'svgmin'
             ]
         },
@@ -379,17 +356,17 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'dev',
-        'useminPrepare',
+    //    'useminPrepare',
         'concurrent:dist',
-        'concat',
-        'ngAnnotate',
+    //    'concat',
+    //    'ngAnnotate',
         'copy:dist',
-        'cdnify',
+    //    'cdnify',
         'autoprefixer',
-        'cssmin',
-        'uglify',
-        'filerev',
-        'usemin',
+    //    'cssmin',
+    //    'uglify',
+    //    'filerev',
+    //    'usemin',
         'htmlmin'
     ]);
 };
