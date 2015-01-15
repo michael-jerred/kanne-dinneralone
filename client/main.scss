@@ -1,14 +1,17 @@
-$body-bg: #333;
-$navbar-default-bg: #333;
+$bg-color: #080808;
+$bg-dark-color: #000;
+
+$body-bg: $bg-color;
+$navbar-default-bg: $bg-color;
 $text-color: #bc8761;
 $link-color: #bc8761;
-$component-active-color: #333;
-$component-active-bg: #333;
+$component-active-color: $bg-color;
+$component-active-bg: $bg-color;
 
-$nav-link-hover-bg: #222;
+$nav-link-hover-bg: $bg-dark-color;
 
-$navbar-default-toggle-hover-bg: #222;
-$navbar-default-toggle-border-color: #222;
+$navbar-default-toggle-hover-bg: #111;
+$navbar-default-toggle-border-color: transparent;
 $navbar-default-toggle-icon-bar-bg: #aaa;
 
 @font-face {
@@ -22,6 +25,12 @@ $font-family-sans-serif: "RomanSD";
 
 
 @import "bootstrap";
+
+html, body { height: 100%; }
+
+body > div.container-fluid {
+    height: 100%;
+}
 
 .text-blur {
     color: transparent;

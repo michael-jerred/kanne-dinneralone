@@ -9,53 +9,50 @@
 
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="navigation/navigation.css">
+    <link rel="stylesheet" href="home/home.css">
   </head>
   <body>
-    <!--[if lt IE 7]>
+    <!--[if lt IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div class="container-fluid">
 
-    <nav class="navbar navbar-default navbar-static-top text-center">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="collapse navbar-collapse row" id="navbar">
-                        <ul class="nav nav-pills nav-justified">
-                            <li><a href="#/">SYNOPSIS</a></li>
-                            <li><a href="#/collaborators">COLLABORATORS</a></li>
-                            <li><a href="#/director">DIRECTOR</a></li>
-                            <li><a href="#/media">MEDIA</a></li>
-                            <li><a href="#/contact">CONTACT</a></li>
-                        </ul>
-                    </div>
-                    <br />
-                    <p class="text-blur">A KANNE VEE FILM</p>
-                    <h2 class="text-blur">DINNER ALONE</h2>
+        <nav class="navbar navbar-default navbar-static-top text-center">
+            <div class="col-md-2 col-sm-2"></div>
+            <div class="col-md-8 col-sm-8">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
-                <div class="col-md-2"></div>
+                <div class="collapse navbar-collapse row" id="navbar">
+                    <ul class="nav nav-pills nav-justified">
+                        <li><a class="no-hover-color" href="#/">SYNOPSIS</a></li>
+                        <li><a class="no-hover-color" href="#/collaborators">COLLABORATORS</a></li>
+                        <li><a class="no-hover-color" href="#/director">DIRECTOR</a></li>
+                        <li><a class="no-hover-color" href="#/media">MEDIA</a></li>
+                        <li><a class="no-hover-color" href="#/contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <br />
+                <h4 class="text-blur">A KANNE VEE FILM</h4>
+                <h1 class="text-blur">DINNER ALONE</h1>
             </div>
-        </div>
-    </nav>
+            <div class="col-md-2 col-sm-2"></div>
+        </nav>
 
-    <div ng-view class="container-fluid">
+        <h4 class="text-center text-blur">COMING SOON</h4>
+
+        <div ng-view>
+        </div>
 
     </div>
 
-    <!-- <div class="footer">
-        <p><span class="glyphicon glyphicon-copyright-mark"></span> copyright 2015</p>
-    </div> -->
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-route.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>

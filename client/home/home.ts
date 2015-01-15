@@ -18,10 +18,27 @@ module App.Home {
 
     class Controller {
 
-        public test: string;
+        public imageHeight: number;
 
-        constructor() {
-            this.test = 'working!';
+        static $inject = ['$scope', '$window'];
+        constructor(private $scope: any,
+                    private $window: any) {
+
+            $($window).resize(() => {
+
+                this.calculateImageHeight();
+                $scope.$apply();
+            });
+
+            this.calculateImageHeight();
+        }
+
+        private calculateImageHeight(): void {
+
+            var top = $('body>div>div').position().top;
+            var fullheight = this.$window.innerHeight;
+
+            this.imageHeight = fullheight - top - 2;
         }
     }
 }

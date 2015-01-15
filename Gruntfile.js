@@ -280,6 +280,7 @@ module.exports = function (grunt) {
                             '*.{ico,png,txt}',
                             '{,**/}*.html',
                             '**/*.{webp}',
+                            '**/*.{jpg,png,jpeg}',
                             'fonts/{,*/}*.*'
                         ],
                         dest: '<%= path.dist %>'
