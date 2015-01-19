@@ -19,6 +19,7 @@ module App.Home {
     class Controller {
 
         public imageHeight: number;
+        private imageNumber: number;
 
         static $inject = ['$scope', '$window'];
         constructor(private $scope: any,
@@ -31,6 +32,16 @@ module App.Home {
             });
 
             this.calculateImageHeight();
+
+            // get random image.
+            this.imageNumber = 1;
+        }
+
+        public imageName(): string {
+
+          return this.imageHeight > 450
+            ? 'img_' + this.imageNumber + '-2x.jpg'
+            : 'img_' + this.imageNumber + '.jpg'
         }
 
         private calculateImageHeight(): void {
