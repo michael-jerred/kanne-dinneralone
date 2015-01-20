@@ -34,7 +34,7 @@ module App.Home {
             this.calculateImageHeight();
 
             // get random image.
-            this.imageNumber = 1;
+            this.imageNumber = Math.floor(1+ Math.random()*4);
         }
 
         public imageName(): string {
