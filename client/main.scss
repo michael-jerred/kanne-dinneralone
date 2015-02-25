@@ -32,7 +32,12 @@ body > div.container-fluid {
     height: 100%;
 }
 
-.text-blur {
+h1.text-blur {
     color: transparent;
     text-shadow: 0 0 3px #bc8761;
+}
+
+h4.text-blur {
+    color: transparent;
+    text-shadow: 0 0 2.5px #bc8761;
 }

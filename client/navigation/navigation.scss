@@ -4,10 +4,10 @@ nav.navbar-default {
 
      li > a {
         color: transparent;
-        text-shadow: 0 0 2px #bc8761;
+        text-shadow: 0 0 1.5px #bc8761;
 
         &:hover {
-            text-shadow: 0 0 2px #9c6741;
+            text-shadow: 0 0 1.5px #9c6741;
             // text-shadow:none;
         }
     }

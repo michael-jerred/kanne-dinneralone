@@ -332,6 +332,9 @@ module.exports = function (grunt) {
         ]);
     });
 
+    grunt.registerTask('servedist', ['build', 'connect:dist:keepalive']);
+
+
     // build development version
     grunt.registerTask('dev', [
       'clean:dev',
@@ -357,17 +360,17 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'dev',
-    //    'useminPrepare',
+        'useminPrepare',
         'concurrent:dist',
-    //    'concat',
+        'concat',
     //    'ngAnnotate',
         'copy:dist',
     //    'cdnify',
         'autoprefixer',
     //    'cssmin',
-    //    'uglify',
+        'uglify',
     //    'filerev',
-    //    'usemin',
+        'usemin',
         'htmlmin'
     ]);
 };
